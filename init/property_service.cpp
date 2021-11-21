@@ -61,6 +61,7 @@
 #include <selinux/android.h>
 #include <selinux/label.h>
 #include <selinux/selinux.h>
+#include <sys/sysinfo.h>
 
 #include "debug_ramdisk.h"
 #include "epoll.h"
@@ -814,6 +815,7 @@ static const char *snet_prop_key[] = {
 	"ro.build.tags",
 	"ro.system.build.tags",
 	"ro.build.selinux",
+	"ro.oem_unlock_supported",
 	NULL
 };
 
@@ -831,6 +833,7 @@ static const char *snet_prop_value[] = {
 	"release-keys",
 	"release-keys",
 	"release-keys",
+	"0",
 	"0",
 	NULL
 };
